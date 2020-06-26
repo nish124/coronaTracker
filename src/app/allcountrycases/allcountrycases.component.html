@@ -1,0 +1,46 @@
+<div class="grid-container">
+  <div class="grid-item">
+    <p class="m-3" style="font-size: 14px;color: #000;">Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.
+    Most people who fall sick with COVID-19 will experience mild to moderate symptoms and recover without special treatment.
+    The coronavirus COVID-19 is affecting 214 countries and territories around the world and 2 international conveyances.
+    </p>
+  </div>
+  <div class="grid-item">
+    <img src="./assets/torre.jpg" class="mt-2 mb-2">
+  </div>
+  <div class="grid-item" class="mt-2 mb-2 ml-1">
+    <img src="./assets/cc.png">
+  </div>
+</div>
+<h5 style="text-align: center;" class="m-3">Reported Cases and Deaths by Country</h5>
+<div class="pb-4 pt-0">
+    <p-table #dt [columns]="cols" [value]="countryStat" [responsive]="true" [scrollable]="true" scrollHeight="304px"
+          >
+        <ng-template pTemplate="caption">
+            <div class="mb-2 globalSearch">
+              <div class="form__group field">
+                <input type="input" class="form__field" placeholder="Search Country" name="name" id='name'
+                  (input)="dt.filterGlobal($event.target.value,'contains')" />
+                <label for="name" class="ml-3 p-2" style="color: #000;background-color: #66FCF1;">Search Country</label>
+              </div>
+            </div>
+        </ng-template>
+        <ng-template pTemplate="header" let-columns>
+            <tr>
+              <th *ngFor="let col of columns">
+                {{col.header}}
+              </th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-rowData let-columns="columns">
+            <tr>
+              <td class="countryGroup" *ngFor="let col of columns">
+                <span class="ui-column-title">{{col.header}}</span>
+                <span class="ui-g">
+                  {{rowData[col.field]}}
+                </span>
+              </td>
+            </tr>
+        </ng-template>
+    </p-table>
+  </div>

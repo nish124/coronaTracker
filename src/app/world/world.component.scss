@@ -1,0 +1,27 @@
+
+img{
+    width: 320px;
+    height: 180px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+  }
+  
+  .grid-item {
+    text-align: center;
+  }
+
+  @media (max-width: 950px) {
+  
+.grid-container {
+    display: grid;
+    grid-template-columns: auto;
+
+  }
+}
