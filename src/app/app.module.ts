@@ -20,8 +20,8 @@ import { IndiacasesComponent } from './indiacases/indiacases.component';
 import { AllcountrycasesComponent } from './allcountrycases/allcountrycases.component';
 import { AboutComponent } from './about/about.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
-
+import { MylistComponent } from './mylist/mylist.component';
+import { DataTablesModule } from 'angular-datatables';
 
 @NgModule({
   declarations: [
@@ -33,6 +33,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     IndiacasesComponent,
     AllcountrycasesComponent,
     AboutComponent,
+    MylistComponent,
   ],
   imports: [
     CommonModule,
@@ -45,6 +46,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HttpClientModule,
     TableModule,
     FontAwesomeModule,
+    DataTablesModule.forRoot()
+
   ],
   providers: [],
   bootstrap: [AppComponent]

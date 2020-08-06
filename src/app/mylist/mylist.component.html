@@ -1,0 +1,23 @@
+<div class="pb-4 pt-0" >
+  <h5 class="text-center">Multiple Selection of Countries</h5>
+    <p-table #dt [columns]="cols" [value]="myList" [responsive]="true" [scrollable]="true" scrollHeight="304px"  
+    >
+      <ng-template pTemplate="header" let-columns>
+          <tr>
+            <th *ngFor="let col of columns">
+                  {{col.header}}
+            </th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-rowData let-columns="columns">
+          <tr class="ui-selectable-row">
+            <td *ngFor="let col of columns">
+              <span class="ui-column-title">{{col.header}}</span>
+              <span class="ui-g">
+                    {{rowData[col.field]}}
+              </span>
+            </td>
+          </tr>
+        </ng-template> 
+    </p-table>
+</div>

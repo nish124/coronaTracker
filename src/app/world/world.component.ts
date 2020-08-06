@@ -9,6 +9,7 @@ import { TestService } from '../shared/test.service';
 export class WorldComponent implements OnInit {
   globalStat: any;
   colsGlobal: any[];
+  todayString : string = new Date().toDateString();
   constructor(private getDataService: TestService) { }
 
   ngOnInit() {

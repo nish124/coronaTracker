@@ -8,7 +8,8 @@ export class TestService {
 
   wolrdStatURL = 'https://coronavirus-monitor.p.rapidapi.com/coronavirus/worldstat.php'
   CountryWiseStatURL = 'https://coronavirus-monitor.p.rapidapi.com/coronavirus/cases_by_country.php'
-  IndiaStatCasesURL = 'https://coronavirus-tracker-india-covid-19.p.rapidapi.com/api/getStatewise';
+  IndiaStatCasesURL = 'https://coronavirus-tracker-india-covid-19.p.rapidapi.com/api/getStatewise'
+  dailyReport= 'https://covid-19-statistics.p.rapidapi.com/reports/total';
 
   constructor(private http: HttpClient) { }
   getGlobalStats() {
@@ -41,4 +42,16 @@ export class TestService {
     };    
     return this.http.get(this.IndiaStatCasesURL, headers);
   }
+
+  getDailyReport(){
+    const headers = {
+    headers: new HttpHeaders({
+      "x-rapidapi-host": "covid-19-statistics.p.rapidapi.com",
+      "x-rapidapi-key": "35f3133e55msha067ee1e9c81dabp197682jsnb532dd31298f",
+      "useQueryString": 'true'
+  })
+  };
+  return this.http.get(this.dailyReport, headers);
 }
+}
+

@@ -52,9 +52,14 @@ footer {
   .social-network a.icoLinkedin:hover {
     background-color: #007bb7;
   }
+  .social-network a.icoGithub:hover {
+    background-color: red;
+  }
   
   .social-network a.icoFacebook:hover i,
-  .social-network a.icoLinkedin:hover i {
+  .social-network a.icoLinkedin:hover i ,
+  .social-network a.icoGithub:hover i
+  {
     color: #fff;
   }
   

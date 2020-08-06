@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./midpart.component.scss']
 })
 export class MidpartComponent implements OnInit {
+
+
   constructor() { }
 
   ngOnInit() {
